@@ -42,11 +42,13 @@ function App() {
       <ul data-testid="repository-list">
         {repositories.map((repository) => (
             <li key={repository.id}>{repository.title}
-            <button className="add" type="button" onClick={handleAddRepository}>Adicionar</button>
             <button className="remove" type="button" onClick={() => handleRemoveRepository(repository.id)}>Remover</button>
             </li>
           ))}          
       </ul>
+
+      <button className="add" type="button" onClick={handleAddRepository}>Adicionar</button>
+
     </>
   );
 }
